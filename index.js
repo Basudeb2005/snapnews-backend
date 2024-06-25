@@ -1,8 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const NEWS_API_KEY = 'ec48b2493593467a8947d0253d2786a2';
+
+// Enable CORS for all routes
+app.use(cors());
 
 app.use(express.json());
 
